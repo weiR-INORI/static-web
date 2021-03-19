@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: static-dev-web
+  name: opsta-dev-web
   namespace: student3-static-dev
   labels:
-    app: static-dev-web
+    app: opsta-dev-web
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: static-dev-web
+      app: opsta-dev-web
   template:
     metadata:
       labels:
-        app: static-dev-web
+        app: opsta-dev-web
     spec:
       containers:
-      - name: static-dev-web
+      - name: opsta-dev-web
         image: ghcr.io/weir-inori/static-web:dev
         imagePullPolicy: Always
         ports:
